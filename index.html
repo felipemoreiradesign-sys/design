@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Motion Graphics - Felipe Moreira</title>
+    <!-- Carrega o Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuração de fonte moderna e fundo escuro */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Fundo escuro sutil */
+            color: #c9d1d9; /* Texto claro */
+        }
+        /* Estilo para a seção de vídeo para garantir a responsividade (16:9) */
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #1f2937; /* Placeholder para o carregamento */
+            border-radius: 0.75rem; /* rounded-xl */
+        }
+        .video-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+    <!-- Configuração do Tailwind para a fonte Inter -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased min-h-screen flex flex-col items-center justify-start py-12 px-4 sm:px-6 lg:px-8">
+
+    <!-- Container Principal do Portfólio -->
+    <main class="w-full max-w-4xl space-y-16">
+
+        <!-- Seção 1: Perfil (Nome, Foto e Bio) -->
+        <header class="text-center space-y-6">
+            
+            <!-- Foto do Perfil -->
+            <div class="flex justify-center">
+                <!-- Imagem do GitHub (URL CORRIGIDA para o link "Raw") -->
+                <img class="w-36 h-36 rounded-full object-cover ring-4 ring-indigo-500 shadow-2xl" 
+                     src="https://github.com/felipemoreiradesign-sys/site/raw/b3187139ba835249e01d9e1782a072c3e2b6c153/image%20(2).png" 
+                     alt="Foto de perfil de Felipe Moreira, Motion Designer">
+            </div>
+            
+            <!-- Nome -->
+            <h1 class="text-5xl font-extrabold tracking-tight text-white sm:text-6xl">
+                Felipe Moreira
+            </h1>
+
+            <!-- Título / Especialidade -->
+            <p class="text-xl text-indigo-400 font-medium">
+                Estudante de Expressão Gráfica | 6º Período UFPR
+            </p>
+
+            <!-- Texto de Apresentação / Informações -->
+            <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                Olá! Atualmente sou estudante de Expressão Gráfica (6º período) na **UFPR**. Possuo habilidades técnicas sólidas em edição e criação de mídias diversas (imagens, vetores, vídeos, etc.), além de modelagem e animação **3D**. Tenho experiência prática com softwares da **Adobe** e **Blender**, buscando transformar conceitos em visuais impactantes.
+            </p>
+
+        </header>
+
+        <!-- Divisor Visual -->
+        <hr class="border-gray-700 w-1/3 mx-auto">
+
+        <!-- Seção 2: Demonstração do Trabalho (Vídeo) -->
+        <section class="space-y-8">
+            <h2 class="text-4xl font-bold text-center text-white">
+                Reel de Motion Graphics
+            </h2>
+            <p class="text-center text-gray-400">
+                Confira abaixo meu reel exclusivo com temática da celebridade brasileira, a **CAPIVARA**.
+            </p>
+
+            <!-- Embed do Vídeo Responsivo -->
+            <div class="video-responsive shadow-2xl shadow-indigo-500/30">
+                <iframe 
+                    src="https://www.youtube.com/embed/zegiPqNgPuI?autoplay=0&amp;rel=0&amp;modestbranding=1" 
+                    title="Reel de Motion Graphics - Capivara" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <!-- FIM do Embed do Vídeo -->
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="mt-16 pt-8 border-t border-gray-800 w-full max-w-4xl text-center text-sm text-gray-500">
+        <p>Email: <a href="mailto:felipemoreiradesign@gmail.com" class="text-indigo-400 hover:text-indigo-300">felipemoreiradesign@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>
