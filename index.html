@@ -93,11 +93,11 @@
 
         </header>
 
-        <!-- Divisor Visual - ANIMADO com delay 0.9s -->
-        <hr class="border-gray-700 w-1/3 mx-auto animate-on-scroll" style="transition-delay: 0.9s;">
+        <!-- Divisor Visual - ANIMADO (agora depende do scroll/posição) -->
+        <hr class="border-gray-700 w-1/3 mx-auto animate-on-scroll">
 
-        <!-- Seção 2: Demonstração do Trabalho (Vídeo) - ANIMADA com delay 1.1s -->
-        <section class="space-y-8 animate-on-scroll" style="transition-delay: 1.1s;">
+        <!-- Seção 2: Demonstração do Trabalho (Vídeo) - ANIMADA (agora depende do scroll/posição) -->
+        <section class="space-y-8 animate-on-scroll">
             <h2 class="text-4xl font-bold text-center text-white">
                 Reel de Motion Graphics
             </h2>
@@ -121,8 +121,8 @@
 
     </main>
 
-    <!-- Rodapé - ANIMADO com delay 1.3s -->
-    <footer class="mt-16 pt-8 border-t border-gray-800 w-full max-w-4xl text-center text-sm text-gray-500 animate-on-scroll" style="transition-delay: 1.3s;">
+    <!-- Rodapé - ANIMADO (agora depende do scroll/posição) -->
+    <footer class="mt-16 pt-8 border-t border-gray-800 w-full max-w-4xl text-center text-sm text-gray-500 animate-on-scroll">
         <p>Email: <a href="mailto:felipemoreiradesign@gmail.com" class="text-indigo-400 hover:text-indigo-300 transition duration-300">felipemoreiradesign@gmail.com</a></p>
     </footer>
 
@@ -146,6 +146,7 @@
         // Aplica o observador a todos os elementos com a classe 'animate-on-scroll'
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.animate-on-scroll').forEach(element => {
+                // A animação de rolagem é aplicada a todos, incluindo os do topo para o efeito inicial
                 observer.observe(element);
             });
         });
