@@ -22,6 +22,7 @@
             max-width: 100%;
             background: #1f2937; /* Placeholder para o carregamento */
             border-radius: 0.75rem; /* rounded-xl */
+            cursor: pointer; /* Indica que é interativo */
         }
         .video-responsive iframe {
             position: absolute;
@@ -30,6 +31,20 @@
             width: 100%;
             height: 100%;
             border: 0;
+        }
+
+        /* --- ANIMAÇÕES AO ROLAR (SCROLL) E ENTRADA --- */
+        /* Estado inicial dos elementos (opacidade 0 e um pequeno deslocamento para baixo) */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            /* Define a transição para a opacidade e o deslocamento */
+            transition: opacity 1.0s ease-out, transform 1.0s ease-out;
+        }
+        /* Estado final quando o elemento está visível */
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
     <!-- Configuração do Tailwind para a fonte Inter -->
@@ -50,48 +65,49 @@
     <!-- Container Principal do Portfólio -->
     <main class="w-full max-w-4xl space-y-16">
 
-        <!-- Seção 1: Perfil (Nome, Foto e Bio) -->
+        <!-- Seção 1: Perfil (Nome, Foto e Bio) - ANIMADA E ESCALONADA -->
         <header class="text-center space-y-6">
             
-            <!-- Foto do Perfil -->
-            <div class="flex justify-center">
-                <!-- Imagem do GitHub (URL CORRIGIDA para o link "Raw") -->
-                <img class="w-36 h-36 rounded-full object-cover ring-4 ring-indigo-500 shadow-2xl" 
+            <!-- Foto do Perfil com efeito HOVER e delay 0.1s -->
+            <div class="flex justify-center animate-on-scroll" style="transition-delay: 0.1s;">
+                <img class="w-36 h-36 rounded-full object-cover ring-4 ring-indigo-500 shadow-2xl 
+                            transform hover:scale-105 transition duration-300" 
                      src="https://github.com/felipemoreiradesign-sys/site/raw/b3187139ba835249e01d9e1782a072c3e2b6c153/image%20(2).png" 
                      alt="Foto de perfil de Felipe Moreira, Motion Designer">
             </div>
             
-            <!-- Nome -->
-            <h1 class="text-5xl font-extrabold tracking-tight text-white sm:text-6xl">
+            <!-- Nome com delay 0.3s -->
+            <h1 class="text-5xl font-extrabold tracking-tight text-white sm:text-6xl animate-on-scroll" style="transition-delay: 0.3s;">
                 Felipe Moreira
             </h1>
 
-            <!-- Título / Especialidade -->
-            <p class="text-xl text-indigo-400 font-medium">
+            <!-- Título / Especialidade com delay 0.5s -->
+            <p class="text-xl text-indigo-400 font-medium animate-on-scroll" style="transition-delay: 0.5s;">
                 Estudante de Expressão Gráfica | 6º Período UFPR
             </p>
 
-            <!-- Texto de Apresentação / Informações -->
-            <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                Olá! Atualmente sou estudante de Expressão Gráfica (6º período) na **UFPR**. Possuo habilidades técnicas sólidas em edição e criação de mídias diversas (imagens, vetores, vídeos, etc.), além de modelagem e animação **3D**. Tenho experiência prática com softwares da **Adobe** e **Blender**, buscando transformar conceitos em visuais impactantes.
+            <!-- Texto de Apresentação / Informações com delay 0.7s -->
+            <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed animate-on-scroll" style="transition-delay: 0.7s;">
+                Olá! Atualmente sou estudante de Expressão Gráfica (6º período) na UFPR. Possuo habilidades técnicas sólidas em edição e criação de mídias diversas (imagens, vetores, vídeos, etc.), além de modelagem e animação 3D. Tenho experiência prática com softwares da Adobe e Blender, buscando transformar conceitos em visuais impactantes.
             </p>
 
         </header>
 
-        <!-- Divisor Visual -->
-        <hr class="border-gray-700 w-1/3 mx-auto">
+        <!-- Divisor Visual - ANIMADO com delay 0.9s -->
+        <hr class="border-gray-700 w-1/3 mx-auto animate-on-scroll" style="transition-delay: 0.9s;">
 
-        <!-- Seção 2: Demonstração do Trabalho (Vídeo) -->
-        <section class="space-y-8">
+        <!-- Seção 2: Demonstração do Trabalho (Vídeo) - ANIMADA com delay 1.1s -->
+        <section class="space-y-8 animate-on-scroll" style="transition-delay: 1.1s;">
             <h2 class="text-4xl font-bold text-center text-white">
                 Reel de Motion Graphics
             </h2>
             <p class="text-center text-gray-400">
-                Confira abaixo meu reel exclusivo com temática da celebridade brasileira, a **CAPIVARA**.
+                Confira abaixo meu reel exclusivo com temática da celebridade brasileira, a CAPIVARA.
             </p>
 
-            <!-- Embed do Vídeo Responsivo -->
-            <div class="video-responsive shadow-2xl shadow-indigo-500/30">
+            <!-- Embed do Vídeo Responsivo com efeito HOVER -->
+            <div class="video-responsive shadow-2xl shadow-indigo-500/30 
+                        transform transition duration-300 hover:shadow-indigo-500/80 hover:shadow-3xl">
                 <iframe 
                     src="https://www.youtube.com/embed/zegiPqNgPuI?autoplay=0&amp;rel=0&amp;modestbranding=1" 
                     title="Reel de Motion Graphics - Capivara" 
@@ -105,10 +121,35 @@
 
     </main>
 
-    <!-- Rodapé -->
-    <footer class="mt-16 pt-8 border-t border-gray-800 w-full max-w-4xl text-center text-sm text-gray-500">
-        <p>Email: <a href="mailto:felipemoreiradesign@gmail.com" class="text-indigo-400 hover:text-indigo-300">felipemoreiradesign@gmail.com</a></p>
+    <!-- Rodapé - ANIMADO com delay 1.3s -->
+    <footer class="mt-16 pt-8 border-t border-gray-800 w-full max-w-4xl text-center text-sm text-gray-500 animate-on-scroll" style="transition-delay: 1.3s;">
+        <p>Email: <a href="mailto:felipemoreiradesign@gmail.com" class="text-indigo-400 hover:text-indigo-300 transition duration-300">felipemoreiradesign@gmail.com</a></p>
     </footer>
+
+    <!-- JavaScript para a Animação ao Rolar (Intersection Observer) -->
+    <script>
+        // Define o observador que checa quando um elemento entra na viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Se estiver visível, adiciona a classe que dispara a animação CSS
+                    entry.target.classList.add('is-visible');
+                    // Não para de observar aqui para garantir que a animação inicial ocorra.
+                    // A animação de rolagem ainda é observada se o usuário rolar para cima e para baixo.
+                } else {
+                    // Opcional: remover a classe para reanimar ao rolar para cima (comentado para evitar repetição constante)
+                    // entry.target.classList.remove('is-visible');
+                }
+            });
+        }, { threshold: 0.1 }); // Dispara quando 10% do elemento está visível
+
+        // Aplica o observador a todos os elementos com a classe 'animate-on-scroll'
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.animate-on-scroll').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 
 </body>
 </html>
